@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BL-Mansoor | Business Land Al-Mansoor</title>
+
+    <meta name="description"
+          content="BL-Mansoor - متجر منتجات TP-Link و Omada و VIGI و Tapo في العراق">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="container nav">
+
+        <a href="#" class="logo">
+            <span>BL-</span>Mansoor
+        </a>
+
+        <nav class="menu">
+
+            <a href="#home">الرئيسية</a>
+
+            <a href="#categories">الأقسام</a>
+
+            <a href="#products">المنتجات</a>
+
+            <a href="#contact">اتصل بنا</a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="search-button" onclick="focusSearch()">
+                🔍
+            </button>
+
+            <button class="cart-button" onclick="openCart()">
+                🛒
+                <span id="cartCount">0</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+    <div class="container hero-content">
+
+        <!-- النص -->
+
+        <div class="hero-text">
+
+            <div class="hero-badge">
+                BL-Mansoor
+            </div>
+
+            <h1>
+                منتجات الشبكات
+                <span>والأجهزة الذكية</span>
+            </h1>
+
+            <p>
+                متجر BL-Mansoor لبيع منتجات
+                TP-Link و Omada و VIGI و Tapo
+                داخل العراق.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#products" class="btn primary">
+                    تسوق الآن
+                </a>
+
+                <a href="#categories" class="btn secondary">
+                    تصفح الأقسام
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- بطاقة شعار TP-Link -->
+
+        <div class="hero-card">
+
+            <div class="hero-logo">
+
+                <img
+                    src="images/tp-link-logo.png"
+                    alt="TP-Link"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                >
+
+                <div class="logo-placeholder">
+                    TP-Link
+                </div>
+
+            </div>
+
+            <h3>
+                منتجات TP-Link
+            </h3>
+
+            <p>
+                راوترات، سويتجات، أجهزة Wi-Fi
+                ومنتجات الشبكات.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- شريط المزايا -->
+
+    <div class="container hero-features">
+
+        <div class="feature-item">
+            <span>✓</span>
+            <div>
+                <strong>منتجات أصلية</strong>
+                <small>منتجات TP-Link</small>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <span>🏷️</span>
+            <div>
+                <strong>أسعار منافسة</strong>
+                <small>أفضل الأسعار في المتجر</small>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <span>🚚</span>
+            <div>
+                <strong>شحن سريع</strong>
+                <small>توصيل داخل العراق</small>
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <span>🎧</span>
+            <div>
+                <strong>دعم فني</strong>
+                <small>قبل وبعد البيع</small>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SEARCH ================= -->
+
+<section class="search-section">
+
+    <div class="container">
+
+        <div class="search-box">
+
+            <span>🔍</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="ابحث عن منتج..."
+                oninput="searchProducts()"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section id="categories" class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>PRODUCT CATEGORIES</span>
+
+            <h2>
+                الأقسام الرئيسية
+            </h2>
+
+            <p>
+                اختر القسم الذي تريد تصفح منتجاته
+            </p>
+
+        </div>
+
+
+        <div class="categories-grid">
+
+
+            <!-- OMADA -->
+<!-- OMADA -->
+
+<div class="category-card"
+     onclick="filterCategory('omada')">
+
+    <div class="category-icon">
+        <img
+            src="https://static.tp-link.com/assets/images/icon/open_graph_logo_omada.png"
+            alt="Omada"
+        >
+    </div>
+
+    <h3>
+        Omada
+    </h3>
+
+    <p>
+        منتجات الشبكات الاحترافية
+    </p>
+
+    <button>
+        عرض المنتجات
+    </button>
+
+</div>
+<!-- MERCUSYS -->
+
+<div class="category-card"
+     onclick="filterCategory('mercusys')">
+
+    <div class="category-icon">
+        <img
+            src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/mercusys.webp"
+            alt="Mercusys"
+        >
+    </div>
+
+    <h3>
+        Mercusys
+    </h3>
+
+    <p>
+        راوترات وأجهزة شبكات
+    </p>
+
+    <button>
+        عرض المنتجات
+    </button>
+
+</div>
+
+            <!-- TP LINK SWITCHES -->
+
+            <div class="category-card"
+                 onclick="filterCategory('switches')">
+<div class="category-icon">
+    <img
+        src="https://static.tp-link.com/common/newtplink/images/new-logo.png"
+        alt="TP-Link"
+    >
+</div>
+                <h3>
+                    TP-Link Switches
+                </h3>
+
+                <p>
+                    سويجات TP-Link
+                </p>
+
+                <button>
+                    عرض المنتجات
+                </button>
+
+            </div>
+
+
+            <!-- TP LINK -->
+
+            <div class="category-card"
+                 onclick="filterCategory('tplink')">
+
+                <div class="category-icon">
+    <img
+        src="https://static.tp-link.com/common/newtplink/images/new-logo.png"
+        alt="TP-Link"
+    >
+</div>
+
+                <h3>
+                    TP-Link
+                </h3>
+
+                <p>
+                    راوترات وأجهزة شبكات
+                </p>
+
+                <button>
+                    عرض المنتجات
+                </button>
+
+            </div>
+
+
+            <!-- VIGI -->
+
+            <div class="category-card"
+                 onclick="filterCategory('vigi')">
+
+                <div class="category-icon">
+    <img
+        src="https://tegas-integrasi.com/cdn/shop/collections/maxresdefault_1.jpg?v=1676346516"
+        alt="VIGI"
+    >
+</div>
+
+                <h3>
+                    VIGI
+                </h3>
+
+                <p>
+                    كاميرات وأنظمة المراقبة
+                </p>
+
+                <button>
+                    عرض المنتجات
+                </button>
+
+            </div>
+
+
+            <!-- TAPO -->
+
+            <div class="category-card"
+                 onclick="filterCategory('tapo')">
+<div class="category-icon">
+    <img
+        src="https://www.xmart.jo/cdn/shop/collections/e227b9a8be71b8045b4e81b16e9ee9bb-removebg-preview.png?v=1747520142&width=640"
+        alt="Tapo"
+    >
+</div>
+
+                <h3>
+                    Tapo
+                </h3>
+
+                <p>
+                    منتجات المنزل الذكي
+                </p>
+
+                <button>
+                    عرض المنتجات
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section id="products" class="section products-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>OUR PRODUCTS</span>
+
+            <h2>
+                المنتجات
+            </h2>
+
+            <p>
+                أحدث المنتجات المتوفرة
+            </p>
+
+        </div>
+
+
+        <!-- FILTER -->
+
+        <div class="filters">
+
+            <button class="filter active"
+                    onclick="filterCategory('all')">
+                الكل
+            </button>
+
+            <button class="filter"
+                    onclick="filterCategory('omada')">
+                Omada
+            </button>
+            <button class="filter"
+        onclick="filterCategory('mercusys')">
+    Mercusys
+</button>
+
+            <button class="filter"
+                    onclick="filterCategory('switches')">
+                Switches
+            </button>
+
+            <button class="filter"
+                    onclick="filterCategory('tplink')">
+                TP-Link
+            </button>
+
+            <button class="filter"
+                    onclick="filterCategory('vigi')">
+                VIGI
+            </button>
+
+            <button class="filter"
+                    onclick="filterCategory('tapo')">
+                Tapo
+            </button>
+
+        </div>
+
+
+        <div id="productsGrid"
+             class="products-grid">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SUB CATEGORIES ================= -->
+
+<section class="subcategories">
+
+    <div class="container">
+
+        <div class="sub-box">
+
+            <h3>
+                Omada
+            </h3>
+
+            <div class="sub-links">
+
+                <button onclick="filterSubcategory('Controllers')">
+                    Controllers
+                </button>
+
+                <button onclick="filterSubcategory('Gateways')">
+                    Gateways
+                </button>
+
+                <button onclick="filterSubcategory('Switches')">
+                    Switches
+                </button>
+
+                <button onclick="filterSubcategory('Access Points')">
+                    Access Points
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="sub-box">
+
+            <h3>
+                TP-Link Switches
+            </h3>
+
+            <div class="sub-links">
+
+                <button onclick="filterSubcategory('PoE Switches')">
+                    PoE Switches
+                </button>
+
+                <button onclick="filterSubcategory('Unmanaged Switches')">
+                    Unmanaged Switches
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="sub-box">
+
+            <h3>
+                TP-Link
+            </h3>
+
+            <div class="sub-links">
+
+                <button onclick="filterSubcategory('Routers')">
+                    Routers
+                </button>
+
+                <button onclick="filterSubcategory('Adapters')">
+                    Adapters
+                </button>
+
+                <button onclick="filterSubcategory('Range Extenders')">
+                    Range Extenders
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="sub-box">
+
+            <h3>
+                VIGI
+            </h3>
+
+            <div class="sub-links">
+
+                <button onclick="filterSubcategory('IP Cameras')">
+                    IP Cameras
+                </button>
+
+                <button onclick="filterSubcategory('Bullet Cameras')">
+                    Bullet Cameras
+                </button>
+
+                <button onclick="filterSubcategory('Dome Cameras')">
+                    Dome Cameras
+                </button>
+
+                <button onclick="filterSubcategory('NVR')">
+                    NVR
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="sub-box">
+
+            <h3>
+                Tapo
+            </h3>
+
+            <div class="sub-links">
+
+                <button onclick="filterSubcategory('Cameras')">
+                    Cameras
+                </button>
+
+                <button onclick="filterSubcategory('Smart Plugs')">
+                    Smart Plugs
+                </button>
+
+                <button onclick="filterSubcategory('Smart Bulbs')">
+                    Smart Bulbs
+                </button>
+
+                <button onclick="filterSubcategory('Sensors')">
+                    Sensors
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<footer id="contact">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <div class="footer-logo">
+                <span>BL-</span>Mansoor
+            </div>
+
+            <p>
+                Business Land Al-Mansoor
+            </p>
+
+            <p>
+                TP-Link Networking & Smart Solutions
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                الأقسام
+            </h3>
+
+            <a href="#categories">
+                Omada
+            </a>
+
+            <a href="#categories">
+                TP-Link
+            </a>
+
+            <a href="#categories">
+                VIGI
+            </a>
+
+            <a href="#categories">
+                Tapo
+            </a>
+
+        </div>
+
+<div>
+
+    <h3>
+        معلومات التواصل
+    </h3>
+
+    <p id="storeAddress">
+        📍 بغداد - العراق
+    </p>
+
+    <p id="storeWhatsapp">
+        📞 0770 XXX XXXX
+    </p>
+
+    <p id="storeEmail">
+        📧 info@bl-mansoor.com
+    </p>
+
+</div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 BL-Mansoor - جميع الحقوق محفوظة
+
+    </div>
+
+</footer>
+
+
+<!-- ================= PRODUCT MODAL ================= -->
+
+<div id="productModal"
+     class="modal">
+
+    <div class="modal-content">
+
+        <button class="close"
+                onclick="closeModal()">
+            ×
+        </button>
+
+        <div id="modalContent"></div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= CART ================= -->
+
+<div id="cartModal"
+     class="modal">
+
+    <div class="modal-content cart-modal">
+
+        <button class="close"
+                onclick="closeCart()">
+            ×
+        </button>
+
+        <h2>
+            🛒 سلة المشتريات
+        </h2>
+
+        <div id="cartItems"></div>
+<div id="customerForm" class="customer-form">
+
+    <h3>
+        بيانات الطلب
+    </h3>
+
+    <div class="form-group">
+
+        <label for="customerName">
+            الاسم الكامل
+        </label>
+
+        <input
+            type="text"
+            id="customerName"
+            placeholder="أدخل الاسم الكامل"
+            autocomplete="name"
+        >
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="customerPhone">
+            رقم الهاتف
+        </label>
+
+        <input
+            type="tel"
+            id="customerPhone"
+            placeholder="07XXXXXXXXX"
+            autocomplete="tel"
+        >
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="customerAddress">
+            عنوان التوصيل
+        </label>
+
+        <textarea
+            id="customerAddress"
+            placeholder="أدخل عنوان التوصيل"
+            rows="3"
+        ></textarea>
+
+    </div>
+
+</div>
+        <div class="cart-total">
+
+            المجموع:
+            <strong id="cartTotal">
+                0
+            </strong>
+            د.ع
+
+        </div>
+
+        <button class="btn primary checkout"
+                onclick="checkout()">
+
+            إتمام الطلب
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
