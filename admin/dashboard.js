@@ -671,7 +671,36 @@ function updateStatistics() {
 /* =====================================================
    SEARCH
 ===================================================== */
+function normalizeCategory(value) {
 
+    const category =
+        String(value || "")
+            .trim()
+            .toLowerCase();
+
+    if (
+        category === "tp-link" ||
+        category === "tplink"
+    ) {
+        return "tplink";
+    }
+
+    if (
+        category === "tp-link switches" ||
+        category === "tplink switches" ||
+        category === "switches"
+    ) {
+        return "switches";
+    }
+
+    if (
+        category === "mercusys"
+    ) {
+        return "mercusys";
+    }
+
+    return category;
+}
 function searchProductsTable() {
 
     const input =
@@ -728,21 +757,19 @@ function searchProductsTable() {
                         query
                     );
 
+const productCategory =
+    normalizeCategory(
+        product.category
+    );
 
-                const productCategory =
-                    String(
-                        product.category ||
-                        ""
-                    )
-                    .trim()
-                    .toLowerCase();
+const selectedCategory =
+    normalizeCategory(
+        category
+    );
 
-
-                const matchesCategory =
-                    category ===
-                        "all" ||
-                    productCategory ===
-                        category.toLowerCase();
+const matchesCategory =
+    selectedCategory === "all" ||
+    productCategory === selectedCategory;
 
 
                 const active =
